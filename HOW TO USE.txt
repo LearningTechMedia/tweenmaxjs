@@ -1,1 +1,42 @@
-# TweenMaxJS
+****************************************************
+Step 01 :
+****************************************************
+
+
+//In index.html
+
+<script src="js/TweenMax.min.js"></script>
+
+
+****************************************************
+Step 02 :
+****************************************************
+
+
+//javascript code / jquery impementation
+
+//TweenMax
+
+      $(function(){
+
+        var $body=$("body"),
+        $TweenMax=$(".Illustration");
+
+          TweenMax.set( $TweenMax, {transformStyle: 'preserve-3d' });
+          $body.mousemove(function(e) {
+
+            var sxPos = e.pageX / $body.width() * 100 - 50;
+            var syPos = e.pageY / $body.height() * 100 - 50;
+
+            console.log("x:" + sxPos + ", y:" + syPos);
+            TweenMax.to ( $TweenMax, 1, {
+              rotationY: 0.25 * sxPos, rotationX: 0.50 * syPos,
+              rotationZ: "-0.1",
+              transformPerspective: 500,
+              transformOrigin: 'center center'
+            });
+        });
+
+      });
+
+//TweenMax
