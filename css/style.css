@@ -4,7 +4,7 @@
 	position: relative;
 	overflow: hidden;
 }
-.banner::before{
+.banner::after{
 	background-image: url(../images/bg-image.png);
 	content: "";
 	width: 100%;
